@@ -1,0 +1,1110 @@
+package org.example;
+
+import org.example.FactA;
+import org.example.FactB;
+import org.example.FactC;
+import org.example.FactD;
+import org.example.FactE;
+
+global java.util.List resultList;
+
+rule "rule0"
+  when
+    $a : FactA( value1 == "ABCDEFG0" )
+    $b : FactB( value1 == "ABCDEFG0", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG0", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG0", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG0", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule0 fired : " + $a );
+end
+
+rule "rule1"
+  when
+    $a : FactA( value1 == "ABCDEFG1" )
+    $b : FactB( value1 == "ABCDEFG1", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG1", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG1", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG1", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule1 fired : " + $a );
+end
+
+rule "rule2"
+  when
+    $a : FactA( value1 == "ABCDEFG2" )
+    $b : FactB( value1 == "ABCDEFG2", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG2", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG2", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG2", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule2 fired : " + $a );
+end
+
+rule "rule3"
+  when
+    $a : FactA( value1 == "ABCDEFG3" )
+    $b : FactB( value1 == "ABCDEFG3", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG3", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG3", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG3", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule3 fired : " + $a );
+end
+
+rule "rule4"
+  when
+    $a : FactA( value1 == "ABCDEFG4" )
+    $b : FactB( value1 == "ABCDEFG4", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG4", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG4", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG4", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule4 fired : " + $a );
+end
+
+rule "rule5"
+  when
+    $a : FactA( value1 == "ABCDEFG5" )
+    $b : FactB( value1 == "ABCDEFG5", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG5", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG5", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG5", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule5 fired : " + $a );
+end
+
+rule "rule6"
+  when
+    $a : FactA( value1 == "ABCDEFG6" )
+    $b : FactB( value1 == "ABCDEFG6", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG6", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG6", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG6", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule6 fired : " + $a );
+end
+
+rule "rule7"
+  when
+    $a : FactA( value1 == "ABCDEFG7" )
+    $b : FactB( value1 == "ABCDEFG7", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG7", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG7", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG7", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule7 fired : " + $a );
+end
+
+rule "rule8"
+  when
+    $a : FactA( value1 == "ABCDEFG8" )
+    $b : FactB( value1 == "ABCDEFG8", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG8", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG8", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG8", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule8 fired : " + $a );
+end
+
+rule "rule9"
+  when
+    $a : FactA( value1 == "ABCDEFG9" )
+    $b : FactB( value1 == "ABCDEFG9", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG9", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG9", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG9", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule9 fired : " + $a );
+end
+
+rule "rule10"
+  when
+    $a : FactA( value1 == "ABCDEFG10" )
+    $b : FactB( value1 == "ABCDEFG10", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG10", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG10", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG10", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule10 fired : " + $a );
+end
+
+rule "rule11"
+  when
+    $a : FactA( value1 == "ABCDEFG11" )
+    $b : FactB( value1 == "ABCDEFG11", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG11", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG11", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG11", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule11 fired : " + $a );
+end
+
+rule "rule12"
+  when
+    $a : FactA( value1 == "ABCDEFG12" )
+    $b : FactB( value1 == "ABCDEFG12", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG12", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG12", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG12", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule12 fired : " + $a );
+end
+
+rule "rule13"
+  when
+    $a : FactA( value1 == "ABCDEFG13" )
+    $b : FactB( value1 == "ABCDEFG13", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG13", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG13", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG13", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule13 fired : " + $a );
+end
+
+rule "rule14"
+  when
+    $a : FactA( value1 == "ABCDEFG14" )
+    $b : FactB( value1 == "ABCDEFG14", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG14", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG14", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG14", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule14 fired : " + $a );
+end
+
+rule "rule15"
+  when
+    $a : FactA( value1 == "ABCDEFG15" )
+    $b : FactB( value1 == "ABCDEFG15", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG15", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG15", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG15", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule15 fired : " + $a );
+end
+
+rule "rule16"
+  when
+    $a : FactA( value1 == "ABCDEFG16" )
+    $b : FactB( value1 == "ABCDEFG16", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG16", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG16", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG16", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule16 fired : " + $a );
+end
+
+rule "rule17"
+  when
+    $a : FactA( value1 == "ABCDEFG17" )
+    $b : FactB( value1 == "ABCDEFG17", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG17", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG17", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG17", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule17 fired : " + $a );
+end
+
+rule "rule18"
+  when
+    $a : FactA( value1 == "ABCDEFG18" )
+    $b : FactB( value1 == "ABCDEFG18", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG18", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG18", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG18", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule18 fired : " + $a );
+end
+
+rule "rule19"
+  when
+    $a : FactA( value1 == "ABCDEFG19" )
+    $b : FactB( value1 == "ABCDEFG19", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG19", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG19", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG19", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule19 fired : " + $a );
+end
+
+rule "rule20"
+  when
+    $a : FactA( value1 == "ABCDEFG20" )
+    $b : FactB( value1 == "ABCDEFG20", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG20", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG20", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG20", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule20 fired : " + $a );
+end
+
+rule "rule21"
+  when
+    $a : FactA( value1 == "ABCDEFG21" )
+    $b : FactB( value1 == "ABCDEFG21", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG21", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG21", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG21", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule21 fired : " + $a );
+end
+
+rule "rule22"
+  when
+    $a : FactA( value1 == "ABCDEFG22" )
+    $b : FactB( value1 == "ABCDEFG22", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG22", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG22", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG22", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule22 fired : " + $a );
+end
+
+rule "rule23"
+  when
+    $a : FactA( value1 == "ABCDEFG23" )
+    $b : FactB( value1 == "ABCDEFG23", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG23", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG23", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG23", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule23 fired : " + $a );
+end
+
+rule "rule24"
+  when
+    $a : FactA( value1 == "ABCDEFG24" )
+    $b : FactB( value1 == "ABCDEFG24", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG24", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG24", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG24", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule24 fired : " + $a );
+end
+
+rule "rule25"
+  when
+    $a : FactA( value1 == "ABCDEFG25" )
+    $b : FactB( value1 == "ABCDEFG25", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG25", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG25", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG25", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule25 fired : " + $a );
+end
+
+rule "rule26"
+  when
+    $a : FactA( value1 == "ABCDEFG26" )
+    $b : FactB( value1 == "ABCDEFG26", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG26", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG26", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG26", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule26 fired : " + $a );
+end
+
+rule "rule27"
+  when
+    $a : FactA( value1 == "ABCDEFG27" )
+    $b : FactB( value1 == "ABCDEFG27", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG27", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG27", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG27", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule27 fired : " + $a );
+end
+
+rule "rule28"
+  when
+    $a : FactA( value1 == "ABCDEFG28" )
+    $b : FactB( value1 == "ABCDEFG28", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG28", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG28", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG28", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule28 fired : " + $a );
+end
+
+rule "rule29"
+  when
+    $a : FactA( value1 == "ABCDEFG29" )
+    $b : FactB( value1 == "ABCDEFG29", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG29", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG29", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG29", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule29 fired : " + $a );
+end
+
+rule "rule30"
+  when
+    $a : FactA( value1 == "ABCDEFG30" )
+    $b : FactB( value1 == "ABCDEFG30", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG30", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG30", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG30", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule30 fired : " + $a );
+end
+
+rule "rule31"
+  when
+    $a : FactA( value1 == "ABCDEFG31" )
+    $b : FactB( value1 == "ABCDEFG31", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG31", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG31", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG31", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule31 fired : " + $a );
+end
+
+rule "rule32"
+  when
+    $a : FactA( value1 == "ABCDEFG32" )
+    $b : FactB( value1 == "ABCDEFG32", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG32", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG32", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG32", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule32 fired : " + $a );
+end
+
+rule "rule33"
+  when
+    $a : FactA( value1 == "ABCDEFG33" )
+    $b : FactB( value1 == "ABCDEFG33", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG33", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG33", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG33", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule33 fired : " + $a );
+end
+
+rule "rule34"
+  when
+    $a : FactA( value1 == "ABCDEFG34" )
+    $b : FactB( value1 == "ABCDEFG34", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG34", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG34", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG34", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule34 fired : " + $a );
+end
+
+rule "rule35"
+  when
+    $a : FactA( value1 == "ABCDEFG35" )
+    $b : FactB( value1 == "ABCDEFG35", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG35", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG35", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG35", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule35 fired : " + $a );
+end
+
+rule "rule36"
+  when
+    $a : FactA( value1 == "ABCDEFG36" )
+    $b : FactB( value1 == "ABCDEFG36", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG36", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG36", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG36", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule36 fired : " + $a );
+end
+
+rule "rule37"
+  when
+    $a : FactA( value1 == "ABCDEFG37" )
+    $b : FactB( value1 == "ABCDEFG37", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG37", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG37", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG37", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule37 fired : " + $a );
+end
+
+rule "rule38"
+  when
+    $a : FactA( value1 == "ABCDEFG38" )
+    $b : FactB( value1 == "ABCDEFG38", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG38", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG38", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG38", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule38 fired : " + $a );
+end
+
+rule "rule39"
+  when
+    $a : FactA( value1 == "ABCDEFG39" )
+    $b : FactB( value1 == "ABCDEFG39", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG39", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG39", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG39", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule39 fired : " + $a );
+end
+
+rule "rule40"
+  when
+    $a : FactA( value1 == "ABCDEFG40" )
+    $b : FactB( value1 == "ABCDEFG40", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG40", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG40", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG40", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule40 fired : " + $a );
+end
+
+rule "rule41"
+  when
+    $a : FactA( value1 == "ABCDEFG41" )
+    $b : FactB( value1 == "ABCDEFG41", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG41", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG41", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG41", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule41 fired : " + $a );
+end
+
+rule "rule42"
+  when
+    $a : FactA( value1 == "ABCDEFG42" )
+    $b : FactB( value1 == "ABCDEFG42", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG42", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG42", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG42", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule42 fired : " + $a );
+end
+
+rule "rule43"
+  when
+    $a : FactA( value1 == "ABCDEFG43" )
+    $b : FactB( value1 == "ABCDEFG43", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG43", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG43", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG43", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule43 fired : " + $a );
+end
+
+rule "rule44"
+  when
+    $a : FactA( value1 == "ABCDEFG44" )
+    $b : FactB( value1 == "ABCDEFG44", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG44", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG44", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG44", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule44 fired : " + $a );
+end
+
+rule "rule45"
+  when
+    $a : FactA( value1 == "ABCDEFG45" )
+    $b : FactB( value1 == "ABCDEFG45", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG45", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG45", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG45", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule45 fired : " + $a );
+end
+
+rule "rule46"
+  when
+    $a : FactA( value1 == "ABCDEFG46" )
+    $b : FactB( value1 == "ABCDEFG46", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG46", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG46", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG46", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule46 fired : " + $a );
+end
+
+rule "rule47"
+  when
+    $a : FactA( value1 == "ABCDEFG47" )
+    $b : FactB( value1 == "ABCDEFG47", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG47", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG47", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG47", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule47 fired : " + $a );
+end
+
+rule "rule48"
+  when
+    $a : FactA( value1 == "ABCDEFG48" )
+    $b : FactB( value1 == "ABCDEFG48", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG48", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG48", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG48", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule48 fired : " + $a );
+end
+
+rule "rule49"
+  when
+    $a : FactA( value1 == "ABCDEFG49" )
+    $b : FactB( value1 == "ABCDEFG49", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG49", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG49", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG49", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule49 fired : " + $a );
+end
+
+rule "rule50"
+  when
+    $a : FactA( value1 == "ABCDEFG50" )
+    $b : FactB( value1 == "ABCDEFG50", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG50", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG50", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG50", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule50 fired : " + $a );
+end
+
+rule "rule51"
+  when
+    $a : FactA( value1 == "ABCDEFG51" )
+    $b : FactB( value1 == "ABCDEFG51", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG51", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG51", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG51", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule51 fired : " + $a );
+end
+
+rule "rule52"
+  when
+    $a : FactA( value1 == "ABCDEFG52" )
+    $b : FactB( value1 == "ABCDEFG52", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG52", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG52", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG52", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule52 fired : " + $a );
+end
+
+rule "rule53"
+  when
+    $a : FactA( value1 == "ABCDEFG53" )
+    $b : FactB( value1 == "ABCDEFG53", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG53", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG53", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG53", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule53 fired : " + $a );
+end
+
+rule "rule54"
+  when
+    $a : FactA( value1 == "ABCDEFG54" )
+    $b : FactB( value1 == "ABCDEFG54", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG54", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG54", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG54", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule54 fired : " + $a );
+end
+
+rule "rule55"
+  when
+    $a : FactA( value1 == "ABCDEFG55" )
+    $b : FactB( value1 == "ABCDEFG55", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG55", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG55", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG55", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule55 fired : " + $a );
+end
+
+rule "rule56"
+  when
+    $a : FactA( value1 == "ABCDEFG56" )
+    $b : FactB( value1 == "ABCDEFG56", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG56", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG56", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG56", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule56 fired : " + $a );
+end
+
+rule "rule57"
+  when
+    $a : FactA( value1 == "ABCDEFG57" )
+    $b : FactB( value1 == "ABCDEFG57", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG57", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG57", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG57", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule57 fired : " + $a );
+end
+
+rule "rule58"
+  when
+    $a : FactA( value1 == "ABCDEFG58" )
+    $b : FactB( value1 == "ABCDEFG58", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG58", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG58", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG58", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule58 fired : " + $a );
+end
+
+rule "rule59"
+  when
+    $a : FactA( value1 == "ABCDEFG59" )
+    $b : FactB( value1 == "ABCDEFG59", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG59", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG59", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG59", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule59 fired : " + $a );
+end
+
+rule "rule60"
+  when
+    $a : FactA( value1 == "ABCDEFG60" )
+    $b : FactB( value1 == "ABCDEFG60", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG60", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG60", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG60", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule60 fired : " + $a );
+end
+
+rule "rule61"
+  when
+    $a : FactA( value1 == "ABCDEFG61" )
+    $b : FactB( value1 == "ABCDEFG61", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG61", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG61", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG61", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule61 fired : " + $a );
+end
+
+rule "rule62"
+  when
+    $a : FactA( value1 == "ABCDEFG62" )
+    $b : FactB( value1 == "ABCDEFG62", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG62", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG62", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG62", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule62 fired : " + $a );
+end
+
+rule "rule63"
+  when
+    $a : FactA( value1 == "ABCDEFG63" )
+    $b : FactB( value1 == "ABCDEFG63", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG63", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG63", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG63", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule63 fired : " + $a );
+end
+
+rule "rule64"
+  when
+    $a : FactA( value1 == "ABCDEFG64" )
+    $b : FactB( value1 == "ABCDEFG64", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG64", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG64", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG64", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule64 fired : " + $a );
+end
+
+rule "rule65"
+  when
+    $a : FactA( value1 == "ABCDEFG65" )
+    $b : FactB( value1 == "ABCDEFG65", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG65", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG65", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG65", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule65 fired : " + $a );
+end
+
+rule "rule66"
+  when
+    $a : FactA( value1 == "ABCDEFG66" )
+    $b : FactB( value1 == "ABCDEFG66", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG66", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG66", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG66", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule66 fired : " + $a );
+end
+
+rule "rule67"
+  when
+    $a : FactA( value1 == "ABCDEFG67" )
+    $b : FactB( value1 == "ABCDEFG67", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG67", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG67", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG67", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule67 fired : " + $a );
+end
+
+rule "rule68"
+  when
+    $a : FactA( value1 == "ABCDEFG68" )
+    $b : FactB( value1 == "ABCDEFG68", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG68", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG68", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG68", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule68 fired : " + $a );
+end
+
+rule "rule69"
+  when
+    $a : FactA( value1 == "ABCDEFG69" )
+    $b : FactB( value1 == "ABCDEFG69", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG69", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG69", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG69", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule69 fired : " + $a );
+end
+
+rule "rule70"
+  when
+    $a : FactA( value1 == "ABCDEFG70" )
+    $b : FactB( value1 == "ABCDEFG70", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG70", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG70", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG70", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule70 fired : " + $a );
+end
+
+rule "rule71"
+  when
+    $a : FactA( value1 == "ABCDEFG71" )
+    $b : FactB( value1 == "ABCDEFG71", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG71", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG71", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG71", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule71 fired : " + $a );
+end
+
+rule "rule72"
+  when
+    $a : FactA( value1 == "ABCDEFG72" )
+    $b : FactB( value1 == "ABCDEFG72", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG72", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG72", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG72", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule72 fired : " + $a );
+end
+
+rule "rule73"
+  when
+    $a : FactA( value1 == "ABCDEFG73" )
+    $b : FactB( value1 == "ABCDEFG73", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG73", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG73", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG73", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule73 fired : " + $a );
+end
+
+rule "rule74"
+  when
+    $a : FactA( value1 == "ABCDEFG74" )
+    $b : FactB( value1 == "ABCDEFG74", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG74", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG74", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG74", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule74 fired : " + $a );
+end
+
+rule "rule75"
+  when
+    $a : FactA( value1 == "ABCDEFG75" )
+    $b : FactB( value1 == "ABCDEFG75", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG75", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG75", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG75", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule75 fired : " + $a );
+end
+
+rule "rule76"
+  when
+    $a : FactA( value1 == "ABCDEFG76" )
+    $b : FactB( value1 == "ABCDEFG76", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG76", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG76", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG76", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule76 fired : " + $a );
+end
+
+rule "rule77"
+  when
+    $a : FactA( value1 == "ABCDEFG77" )
+    $b : FactB( value1 == "ABCDEFG77", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG77", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG77", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG77", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule77 fired : " + $a );
+end
+
+rule "rule78"
+  when
+    $a : FactA( value1 == "ABCDEFG78" )
+    $b : FactB( value1 == "ABCDEFG78", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG78", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG78", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG78", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule78 fired : " + $a );
+end
+
+rule "rule79"
+  when
+    $a : FactA( value1 == "ABCDEFG79" )
+    $b : FactB( value1 == "ABCDEFG79", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG79", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG79", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG79", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule79 fired : " + $a );
+end
+
+rule "rule80"
+  when
+    $a : FactA( value1 == "ABCDEFG80" )
+    $b : FactB( value1 == "ABCDEFG80", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG80", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG80", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG80", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule80 fired : " + $a );
+end
+
+rule "rule81"
+  when
+    $a : FactA( value1 == "ABCDEFG81" )
+    $b : FactB( value1 == "ABCDEFG81", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG81", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG81", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG81", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule81 fired : " + $a );
+end
+
+rule "rule82"
+  when
+    $a : FactA( value1 == "ABCDEFG82" )
+    $b : FactB( value1 == "ABCDEFG82", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG82", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG82", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG82", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule82 fired : " + $a );
+end
+
+rule "rule83"
+  when
+    $a : FactA( value1 == "ABCDEFG83" )
+    $b : FactB( value1 == "ABCDEFG83", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG83", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG83", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG83", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule83 fired : " + $a );
+end
+
+rule "rule84"
+  when
+    $a : FactA( value1 == "ABCDEFG84" )
+    $b : FactB( value1 == "ABCDEFG84", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG84", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG84", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG84", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule84 fired : " + $a );
+end
+
+rule "rule85"
+  when
+    $a : FactA( value1 == "ABCDEFG85" )
+    $b : FactB( value1 == "ABCDEFG85", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG85", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG85", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG85", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule85 fired : " + $a );
+end
+
+rule "rule86"
+  when
+    $a : FactA( value1 == "ABCDEFG86" )
+    $b : FactB( value1 == "ABCDEFG86", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG86", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG86", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG86", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule86 fired : " + $a );
+end
+
+rule "rule87"
+  when
+    $a : FactA( value1 == "ABCDEFG87" )
+    $b : FactB( value1 == "ABCDEFG87", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG87", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG87", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG87", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule87 fired : " + $a );
+end
+
+rule "rule88"
+  when
+    $a : FactA( value1 == "ABCDEFG88" )
+    $b : FactB( value1 == "ABCDEFG88", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG88", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG88", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG88", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule88 fired : " + $a );
+end
+
+rule "rule89"
+  when
+    $a : FactA( value1 == "ABCDEFG89" )
+    $b : FactB( value1 == "ABCDEFG89", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG89", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG89", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG89", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule89 fired : " + $a );
+end
+
+rule "rule90"
+  when
+    $a : FactA( value1 == "ABCDEFG90" )
+    $b : FactB( value1 == "ABCDEFG90", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG90", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG90", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG90", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule90 fired : " + $a );
+end
+
+rule "rule91"
+  when
+    $a : FactA( value1 == "ABCDEFG91" )
+    $b : FactB( value1 == "ABCDEFG91", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG91", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG91", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG91", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule91 fired : " + $a );
+end
+
+rule "rule92"
+  when
+    $a : FactA( value1 == "ABCDEFG92" )
+    $b : FactB( value1 == "ABCDEFG92", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG92", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG92", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG92", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule92 fired : " + $a );
+end
+
+rule "rule93"
+  when
+    $a : FactA( value1 == "ABCDEFG93" )
+    $b : FactB( value1 == "ABCDEFG93", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG93", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG93", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG93", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule93 fired : " + $a );
+end
+
+rule "rule94"
+  when
+    $a : FactA( value1 == "ABCDEFG94" )
+    $b : FactB( value1 == "ABCDEFG94", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG94", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG94", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG94", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule94 fired : " + $a );
+end
+
+rule "rule95"
+  when
+    $a : FactA( value1 == "ABCDEFG95" )
+    $b : FactB( value1 == "ABCDEFG95", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG95", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG95", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG95", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule95 fired : " + $a );
+end
+
+rule "rule96"
+  when
+    $a : FactA( value1 == "ABCDEFG96" )
+    $b : FactB( value1 == "ABCDEFG96", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG96", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG96", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG96", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule96 fired : " + $a );
+end
+
+rule "rule97"
+  when
+    $a : FactA( value1 == "ABCDEFG97" )
+    $b : FactB( value1 == "ABCDEFG97", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG97", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG97", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG97", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule97 fired : " + $a );
+end
+
+rule "rule98"
+  when
+    $a : FactA( value1 == "ABCDEFG98" )
+    $b : FactB( value1 == "ABCDEFG98", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG98", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG98", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG98", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule98 fired : " + $a );
+end
+
+rule "rule99"
+  when
+    $a : FactA( value1 == "ABCDEFG99" )
+    $b : FactB( value1 == "ABCDEFG99", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5, value6 == $a.value6, value7 == $a.value7, value8 == $a.value8, value9 == $a.value9, value10 == $a.value10 )
+    $c : FactC( value1 == "ABCDEFG99", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5, value6 == $b.value6, value7 == $b.value7, value8 == $b.value8, value9 == $b.value9, value10 == $b.value10 )
+    $d : FactD( value1 == "ABCDEFG99", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5, value6 == $c.value6, value7 == $c.value7, value8 == $c.value8, value9 == $c.value9, value10 == $c.value10 )
+    $e : FactE( value1 == "ABCDEFG99", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5, value6 == $d.value6, value7 == $d.value7, value8 == $d.value8, value9 == $d.value9, value10 == $d.value10 )
+  then
+    resultList.add( "rule99 fired : " + $a );
+end
+
